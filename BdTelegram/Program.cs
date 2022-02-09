@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace BdTelegram.DbStructure
+﻿namespace BdTelegram.DbStructure
 {
     class Program
     {
@@ -13,7 +11,6 @@ namespace BdTelegram.DbStructure
         {
             using (var context = new Context())
             {
-                context.Database.EnsureDeleted();
 
                 if (context.Database.EnsureCreated())
                 {
@@ -22,9 +19,9 @@ namespace BdTelegram.DbStructure
                 else
                 {
                     Console.WriteLine("БД уже существует");
-                }     
-                
-            
+                }
+
+
             }
         }
     

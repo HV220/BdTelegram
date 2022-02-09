@@ -1,18 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BdTelegram.DbStructure
 {
-    class Context : DbContext
+    public class Context : DbContext
     {
 
-        DbSet<Category> Category { get; set; }
-        DbSet<Product> Product { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Menu> Menu { get; set; }
 
         //метод для подключения к БД
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
