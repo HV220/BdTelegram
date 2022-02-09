@@ -8,13 +8,13 @@ namespace BdTelegram.DbStructure
 {
     class Product
     {
-        int IdProduct { get; set; }
-        string Name { get; set; }
+        public int IdProduct { get; set; }
+        public string Name { get; set; }
 
-        int Count { get; set; }
-        string Description { get; set; }
-        string LinkDownloading { get; set; }
+        public int Count { get; set; }
+        public string Description { get; set; }
+        public string LinkDownloading { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
