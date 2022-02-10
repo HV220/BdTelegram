@@ -2,11 +2,10 @@
 
 namespace BdTelegram
 {
-    internal class Category
+    internal class Setting
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int? ParentId { get; set; }
-        public Category? Parent { get; set; }
+        public string Value { get; set; }
     }
 }

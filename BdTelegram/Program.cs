@@ -1,30 +1,24 @@
-﻿namespace BdTelegram.DbStructure
+﻿using Microsoft.EntityFrameworkCore;
+using System.Text;
+using System.Linq;
+
+namespace BdTelegram
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            PrintData();     
-        }
-
-        private static void PrintData()
-        {
             using (var context = new Context())
             {
+                var menuItem = context.MenuItems.ToList();
 
-                if (context.Database.EnsureCreated())
+                foreach (var item in menuItem)
                 {
-                    Console.WriteLine("БД успешно создана");
-                }
-                else
-                {
-                    Console.WriteLine("БД уже существует");
-                }
 
+                    Console.WriteLine($"Name: {item.Name}");
 
+                }
             }
         }
-    
     }
-
 }
